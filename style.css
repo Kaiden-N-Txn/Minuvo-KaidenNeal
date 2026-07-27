@@ -1,0 +1,96 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+    padding: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+nav a:hover{
+    color: green;
+    border-bottom: 3px solid green;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+body{
+    h1 {
+  font-size: 50px;
+  max-width: 500px;
+}
+
+span {
+  color: green;
+}
+
+p {
+  font-size: 20px;
+  color: #000000;
+  line-height: 1.2;
+  max-width: 500px;
+}
+}
+
+.sign-in {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 10px 20px;
+  background: white;
+  color: green;
+  border: 1px solid green;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  width: 150px;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.find-button {
+  background-color: #218c4b;
+  color: white;
+  border: none;
+}
+
+.task-button {
+  background-color: white;
+  color: #218c4b;
+  border: 1px solid #218c4b;
+}
