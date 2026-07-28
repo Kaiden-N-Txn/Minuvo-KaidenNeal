@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+      <button class="sign-in">Sign Up</button>
+
+    <header>
+  <img src="file:///Users/itz.kaiden/Desktop/Screenshot%202026-07-27%20at%201.37.13%E2%80%AFPM.png" class="logo">
+</header>
+
  <nav> 
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -17,6 +24,44 @@
         <link rel="stylesheet" href="style.css">
     </ul>
 </nav>  
+   <link rel="stylesheet" href="activities.css">
+
+<section class="activities">
+
+    <h1>Find an Activity</h1>
+    <p>Select how much free time you have and what you're interested in.</p>
+
+    <label for="time">How much time do you have?</label>
+    <select id="time">
+        <option>15 Minutes</option>
+        <option>30 Minutes</option>
+        <option>1 Hour</option>
+        <option>2 Hours</option>
+    </select>
+
+    <h3>Select an Interest</h3>
+
+    <div class="buttons">
+        <button onclick="chooseInterest('Learning')">Learning</button>
+        <button onclick="chooseInterest('Health')">Health</button>
+        <button onclick="chooseInterest('Creativity')">Creativity</button>
+        <button onclick="chooseInterest('Career')">Career</button>
+        <button onclick="chooseInterest('Social')">Social</button>
+        <button onclick="chooseInterest('Relaxation')">Relaxation</button>
+    </div>
+
+    <br>
+
+    <button class="generate" onclick="generateIdeas()">Generate Ideas</button>
+
+    <h2>Activity Ideas</h2>
+    <p id="result">Your activity will appear here.</p>
+
     
+</section>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>

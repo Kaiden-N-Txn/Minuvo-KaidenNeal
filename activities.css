@@ -1,0 +1,173 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.activities{
+    width: 700px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.activities h1{
+    font-size: 42px;
+    
+}
+
+.activities p{
+    color: gray;
+   
+}
+
+.card{
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+select{
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.buttons button{
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #eef9ef;
+    color: green;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.buttons button:hover{
+    background: green;
+    color: white;
+}
+
+.generate {
+    width: 100%;
+    padding: 16px;
+    background: #1f7a3d;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.2s ease;
+}
+
+.generate:hover {
+    background: #17632f;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.generate:active {
+    transform: translateY(0);
+}
+
+
+label{
+    display:block;
+    margin-top:25px;
+    margin-bottom:10px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+#result{
+    margin:40px auto;
+    width:70%;
+    background:#f7f7f7;
+    padding:25px;
+    border-radius:15px;
+    font-size:22px;
+    color:#666;
+}
+
+.activities{
+    text-align:center;
+    max-width:1100px;
+    margin:auto;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.buttons button{
+    width:170px;
+    height:60px;
+    border:none;
+    border-radius:30px;
+    background:#eef8ef;
+    color:#17753c;
+    font-size:22px;
+}
+
+select{
+    width:100%;
+    height:65px;
+    font-size:24px;
+    border-radius:15px;
+    padding-left:20px;
+}
+
+.activities{
+    text-align: center;
+}
+
+.activities h1,
+.activities p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.activities h1 {
+    margin-bottom: 10px;
+}
+
+.activities p {
+    margin-top: 0;
+}
+
+.buttons button {
+    width: 170px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    background: #eef8ef;
+    color: #17753c;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+    background: #1f7a3d;
+    color: white;
+    transform: translateY(-2px);
+}
