@@ -1,41 +1,74 @@
 let interest = "";
 
-function chooseInterest(choice){
+const ideas = {
+    Learning: [
+        "Watch an educational video",
+        "Read an interesting article",
+        "Learn a few words in a new language",
+        "Take a free online course",
+        "Listen to an educational podcast"
+    ],
+
+    Health: [
+        "Go for a walk",
+        "Stretch your body",
+        "Do a home workout",
+        "Practice yoga",
+        "Ride a bike"
+    ],
+
+    Creativity: [
+        "Draw a picture",
+        "Paint something",
+        "Write a short story",
+        "Take photos outside",
+        "Try origami"
+    ],
+
+    Career: [
+        "Update your resume",
+        "Practice interview questions",
+        "Learn a new job skill",
+        "Organize your workspace",
+        "Research career opportunities"
+    ],
+
+    Social: [
+        "Call a friend",
+        "Text a family member",
+        "Invite someone for coffee",
+        "Play a game with friends",
+        "Write a thoughtful message"
+    ],
+
+    Relaxation: [
+        "Listen to relaxing music",
+        "Meditate",
+        "Read a book",
+        "Take a break outside",
+        "Practice deep breathing"
+    ]
+};
+
+function chooseInterest(choice) {
     interest = choice;
 }
 
-function generateIdeas(){
+function generateIdeas() {
 
     let time = document.getElementById("time").value;
     let result = document.getElementById("result");
 
-    if(interest == ""){
-        result.innerHTML = "Please choose an interest.";
+    if (interest == "") {
+        result.innerHTML = "<p>Please choose an interest.</p>";
         return;
     }
 
-    if(interest == "Learning"){
-        result.innerHTML = "Watch an educational video for " + time + ".";
-    }
+    let activityList = ideas[interest];
 
-    else if(interest == "Health"){
-        result.innerHTML = "Go for a walk for " + time + ".";
-    }
+    result.innerHTML = "<h2>Here are some ideas:</h2>";
 
-    else if(interest == "Creativity"){
-        result.innerHTML = "Draw or paint for " + time + ".";
+    for (let i = 0; i < activityList.length; i++) {
+        result.innerHTML += "<p>• " + activityList[i] + " for " + time + ".</p>";
     }
-
-    else if(interest == "Career"){
-        result.innerHTML = "Update your resume for " + time + ".";
-    }
-
-    else if(interest == "Social"){
-        result.innerHTML = "Call a friend for " + time + ".";
-    }
-
-    else if(interest == "Relaxation"){
-        result.innerHTML = "Listen to relaxing music for " + time + ".";
-    }
-
 }

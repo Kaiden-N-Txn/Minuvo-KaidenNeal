@@ -23,6 +23,34 @@
         <link rel="stylesheet" href="style.css">
     </ul>
 </nav>  
-    
+   <link rel="stylesheet" href="lists.css"> 
+
+<section class="header">
+    <h1>My Tasks</h1>
+    <p>Manage your tasks and stay on track.</p>
+</section>
+
+
+
+<div class="filters">
+    <button>All Tasks</button>
+    <button>To Do</button>
+    <button>In Progress</button>
+    <button>Completed</button>
+</div>
+
+
+
+<input type="text" id="newTask" placeholder="Enter a task">
+
+<button onclick="addTask()">
+
+Add Task
+
+</button>
+
+<div id="taskList"></div>
+
+<script src="lists.js"></script>
 </body>
 </html>
