@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
- 
+ <link rel="stylesheet" href="progress.css">
+
       <button class="sign-in">Sign Up</button>
 
     <header>
@@ -23,6 +24,45 @@
         <link rel="stylesheet" href="style.css">
     </ul>
 </nav>  
-    
+
+
+<section class="header">
+    <h1>Your Progress</h1>
+    <p>See how you're growing and making the most of your time.</p>
+</section>
+
+<div class="stats">
+
+    <div class="card">
+        <h2 id="completed">0</h2>
+        <p>Tasks Completed</p>
+    </div>
+
+    <div class="card">
+        <h2 id="hours">0</h2>
+        <p>Hours Invested</p>
+    </div>
+
+    <div class="card">
+        <h2 id="streak">0</h2>
+        <p>Day Streak</p>
+    </div>
+
+    <div class="card">
+        <h2 id="score">0%</h2>
+        <p>Productivity Score</p>
+    </div>
+
+</div>
+
+<div class="chart-box">
+    <h2>Activity Breakdown</h2>
+
+    <div id="activities"></div>
+</div>
+
+
+
+<script src="progress.js"></script>
 </body>
 </html>

@@ -6,6 +6,8 @@ nav{
     gap: 40px;
     padding: 20px;
     border-bottom: 1px solid lightgray;
+    box-shadow: rgba(0, 128, 0, 0.3);
+    
 }
 
 nav a{
@@ -180,4 +182,3 @@ p {
   border-radius: 10px;
 }
 
-h1 ::-webkit-textfield-decoration-container

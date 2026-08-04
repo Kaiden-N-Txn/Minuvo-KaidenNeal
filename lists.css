@@ -1,6 +1,6 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: #f7f9f7;
     margin: 0;
     padding: 40px;
@@ -103,3 +103,4 @@ button[onclick="addTask()"]:hover {
 .delete-btn:hover {
     background-color: darkred;
 }
+
