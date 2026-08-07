@@ -104,3 +104,25 @@ button[onclick="addTask()"]:hover {
     background-color: darkred;
 }
 
+.task select {
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 1px solid #17753c;
+    background-color: white;
+    color: #17753c;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+
+.task select:focus {
+    box-shadow: 0 0 0 3px rgba(23,117,60,0.15);
+}
+
+
+.task select:hover {
+    background-color: #f1f8f3;
+}

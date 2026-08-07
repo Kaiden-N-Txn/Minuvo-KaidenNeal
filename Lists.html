@@ -9,7 +9,9 @@
 <nav> 
 
 
-      <button class="sign-in">Sign Up</button>
+    <a href="form.html">
+    <button class="sign-in">Sign Up</button>
+</a>
 
     <header>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,6 +24,7 @@
         <li><a href="Activities.html">Activities</a></li>
         <li><a href="progress.html">Progress</a></li>
          <li><a href="profile.html">Profile</a></li>
+          <li><a href="about.html">About</a></li>
         <link rel="stylesheet" href="style.css">
     </ul>
 </nav>  
@@ -35,10 +38,21 @@
 
 
 <div class="filters">
-    <button>All Tasks</button>
-    <button>To Do</button>
-    <button>In Progress</button>
-    <button>Completed</button>
+  <button onclick="filterTasks('all')">
+        All Tasks
+    </button>
+
+    <button onclick="filterTasks('todo')">
+        To Do
+    </button>
+
+    <button onclick="filterTasks('progress')">
+        In Progress
+    </button>
+
+    <button onclick="filterTasks('completed')">
+        Completed
+    </button>
 </div>
 
 

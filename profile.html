@@ -7,8 +7,11 @@
 </head>
 <body>
 
-      <button class="sign-in">Sign Up</button>
+     <link rel="stylesheet" href="profile.css">
 
+     <a href="form.html">
+    <button class="sign-in">Sign Up</button>
+</a>
     <header>
   <img src="file:///Users/itz.kaiden/Desktop/Screenshot%202026-07-27%20at%201.37.13%E2%80%AFPM.png" class="logo">
 </header>
@@ -20,11 +23,218 @@
         <li><a href="Activities.html">Activities</a></li>
         <li><a href="progress.html">Progress</a></li>
          <li><a href="profile.html">Profile</a></li>
+          <li><a href="about.html">About</a></li>
         <link rel="stylesheet" href="style.css">
     </ul>
 </nav>  
 
 
+
+<main class="profile-container">
+
+   
+    <div class="page-heading">
+        <div>
+            <h1>Profile</h1>
+            <p>Manage your account and productivity preferences.</p>
+        </div>
+
+        <button class="edit-btn" onclick="editProfile()">
+            Edit Profile
+        </button>
+    </div>
+
+    <section class="profile-card">
+        <div class="profile-info">
+            <div class="avatar">
+                JD
+            </div>
+
+            <div>
+                <h2 id="profileName">John Doe</h2>
+                <p id="profileEmail">john@example.com</p>
+
+                <span class="member-badge">
+                    Minuvo Member
+                </span>
+            </div>
+        </div>
+
+        <div class="profile-message">
+            <span>✨</span>
+            <p>
+                Keep making small steps toward your goals.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <h2 class="section-title">
+            Account Overview
+        </h2>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">✓</div>
+
+                <div>
+                    <h3 id="tasksCompleted">0</h3>
+                    <p>Tasks Completed</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⏱</div>
+
+                <div>
+                    <h3 id="hoursInvested">0</h3>
+                    <p>Hours Invested</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+
+                <div>
+                    <h3 id="currentStreak">0</h3>
+                    <p>Day Streak</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">★</div>
+
+                <div>
+                    <h3 id="productivityScore">0%</h3>
+                    <p>Productivity Score</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <div class="content-grid">
+
+        <section class="info-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Preferences</h2>
+                    <p>Customize your Minuvo experience.</p>
+                </div>
+
+                <span class="settings-icon">⚙</span>
+            </div>
+
+            <div class="preference">
+                <div>
+                    <h3>Default Time</h3>
+                    <p>How much free time do you usually have?</p>
+                </div>
+
+                <span id="defaultTime">
+                    30 min
+                </span>
+            </div>
+
+            <div class="preference">
+                <div>
+                    <h3>Notifications</h3>
+                    <p>Receive productivity reminders.</p>
+                </div>
+
+                <span class="status on">
+                    On
+                </span>
+            </div>
+
+            <div class="preference">
+                <div>
+                    <h3>Daily Reminders</h3>
+                    <p>Get reminded to stay productive.</p>
+                </div>
+
+                <span class="status on">
+                    On
+                </span>
+            </div>
+
+            <div class="preference">
+                <div>
+                    <h3>Theme</h3>
+                    <p>Your current Minuvo appearance.</p>
+                </div>
+
+                <span>
+                    Light
+                </span>
+            </div>
+        </section>
+
+        <section class="info-card">
+            <div class="card-heading">
+                <div>
+                    <h2>Account Stats</h2>
+                    <p>Your productivity journey.</p>
+                </div>
+
+                <span class="chart-icon">↗</span>
+            </div>
+
+            <div class="account-stat">
+                <span>Tasks Completed</span>
+
+                <strong id="accountTasks">
+                    0
+                </strong>
+            </div>
+
+            <div class="account-stat">
+                <span>Hours Invested</span>
+
+                <strong id="accountHours">
+                    0
+                </strong>
+            </div>
+
+            <div class="account-stat">
+                <span>Current Streak</span>
+
+                <strong id="accountStreak">
+                    0 days
+                </strong>
+            </div>
+
+            <div class="account-stat">
+                <span>Longest Streak</span>
+
+                <strong id="longestStreak">
+                    0 days
+                </strong>
+            </div>
+        </section>
+    </div>
+
+   
+    <section class="quote-card">
+        <div class="quote-mark">
+            “
+        </div>
+
+        <div>
+            <h2>
+                Small actions lead to big results.
+            </h2>
+
+            <p>
+                Keep going — every productive moment counts.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<script src="profile.js"></script>
 
 
     

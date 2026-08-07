@@ -1,14 +1,19 @@
 function saveTasks() {
+
     let tasks = [];
 
     document.querySelectorAll(".task").forEach(function(task) {
+
         tasks.push({
             text: task.querySelector("span").textContent,
-            completed: task.querySelector("input").checked
+            completed: task.querySelector("input").checked,
+            status: task.dataset.status
         });
+
     });
 
     localStorage.setItem("tasks", JSON.stringify(tasks));
+
 }
 
 function addTask() {
@@ -23,6 +28,7 @@ function addTask() {
     let div = document.createElement("div");
 
     div.className = "task";
+    div.dataset.status = "todo";
 
     div.innerHTML = `
         <input type="checkbox">
@@ -70,6 +76,27 @@ document.addEventListener("change", function(event){
 
 });
 
+function changeStatus(select){
+
+    let task = select.parentElement;
+
+    task.dataset.status = select.value;
+
+    if(select.value == "completed"){
+        task.querySelector("input").checked = true;
+        task.querySelector("span").style.textDecoration = "line-through";
+        task.querySelector("span").style.color = "gray";
+    }
+    else{
+        task.querySelector("input").checked = false;
+        task.querySelector("span").style.textDecoration = "none";
+        task.querySelector("span").style.color = "black";
+    }
+
+    saveTasks();
+
+}
+
 window.onload = function() {
 
     let savedTasks = JSON.parse(localStorage.getItem("tasks"));
@@ -83,12 +110,22 @@ window.onload = function() {
             let div = document.createElement("div");
 
             div.className = "task";
+            div.dataset.status = task.status || "todo";
+
 
             div.innerHTML = `
-                <input type="checkbox" ${task.completed ? "checked" : ""}>
-                <span>${task.text}</span>
-                <button class="delete-btn" onclick="removeTask(this)">Delete</button>
-            `;
+    <input type="checkbox" ${task.completed ? "checked" : ""}>
+
+    <span>${task.text}</span>
+
+    <select onchange="changeStatus(this)">
+        <option value="todo" ${task.status=="todo" ? "selected":""}>To Do</option>
+        <option value="progress" ${task.status=="progress" ? "selected":""}>In Progress</option>
+        <option value="completed" ${task.status=="completed" ? "selected":""}>Completed</option>
+    </select>
+
+    <button class="delete-btn" onclick="removeTask(this)">Delete</button>
+`;
 
             if (task.completed) {
                 div.querySelector("span").style.textDecoration = "line-through";
@@ -101,4 +138,27 @@ window.onload = function() {
     }
 
 };
+
+function filterTasks(category){
+
+    let tasks = document.querySelectorAll(".task");
+
+
+    tasks.forEach(function(task){
+
+        if(category == "all"){
+            task.style.display = "flex";
+        }
+
+        else if(task.dataset.status == category){
+            task.style.display = "flex";
+        }
+
+        else{
+            task.style.display = "none";
+        }
+
+    });
+
+}
 
